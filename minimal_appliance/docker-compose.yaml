@@ -17,6 +17,7 @@ services:
     image: ${REGISTRY}docker.elastic.co/elasticsearch/elasticsearch:7.8.0
     environment:
       - xpack.security.enabled=true
+      - xpack.ml.enabled=false
       - discovery.type=single-node
       - logger.level=WARN
       - "ELASTIC_PASSWORD=${ELASTIC_PASSWORD}"
